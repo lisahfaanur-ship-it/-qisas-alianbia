@@ -1,0 +1,6 @@
+{
+  "name": "قصص الأنبياء للأطفال",
+  "description": "منصة تعليمية إسلامية تفاعلية للأطفال لقصص الأنبياء والرسل مستندة بدقة للقرآن الكريم والسنة الصحيحة مع نظام فئات عمرية واستماع وتدبر ومصادر موثقة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
