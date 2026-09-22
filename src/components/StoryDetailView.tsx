@@ -32,6 +32,7 @@ import { SourceVerificationModal } from './SourceVerificationModal';
 import { StoryReadingProgress } from './StoryReadingProgress';
 import { StoryShareBar } from './StoryShareBar';
 import { ReadingPreferencesModal, TextFontSize, ReadingTheme } from './ReadingPreferencesModal';
+import { InteractiveText } from './InteractiveText';
 
 interface StoryDetailViewProps {
   prophet: ProphetStory;
@@ -646,7 +647,11 @@ export const StoryDetailView: React.FC<StoryDetailViewProps> = ({
                       <div
                         className={`p-6 sm:p-8 rounded-3xl transition-all duration-300 font-normal ${getNarrativeBoxStyle()} ${getFontFamilyClass()} ${getFontSizeClass()} ${getLineHeightClass()}`}
                       >
-                        <p className="whitespace-pre-line leading-inherit">{chap.text}</p>
+                        <InteractiveText
+                          text={chap.text}
+                          vocabulary={prophet.vocabulary || []}
+                          prophetName={prophet.name}
+                        />
                       </div>
 
                       {/* Chapter Progress Milestone Card for Children */}
@@ -749,7 +754,11 @@ export const StoryDetailView: React.FC<StoryDetailViewProps> = ({
               <div
                 className={`p-6 sm:p-8 rounded-3xl transition-all duration-300 font-normal ${getNarrativeBoxStyle()} ${getFontFamilyClass()} ${getFontSizeClass()} ${getLineHeightClass()}`}
               >
-                <p className="whitespace-pre-line leading-inherit">{currentChapter.text}</p>
+                <InteractiveText
+                  text={currentChapter.text}
+                  vocabulary={prophet.vocabulary || []}
+                  prophetName={prophet.name}
+                />
               </div>
 
               {/* Chapter Navigation Buttons */}

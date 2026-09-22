@@ -12,7 +12,8 @@ import {
   Sparkles,
   ShieldCheck,
   Award,
-  Star
+  Star,
+  History
 } from 'lucide-react';
 import { AgeGroup } from '../types';
 
@@ -37,6 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navItems = [
     { id: 'home', label: 'الرئيسية', icon: Sparkles },
+    { id: 'timeline', label: 'الخط الزمني', icon: History },
     { id: 'stories', label: 'قصص الأنبياء', icon: BookOpen },
     { id: 'achievements', label: 'الأوسمة والإنجازات', icon: Award },
     { id: 'audio', label: 'الاستماع الصوتي', icon: Headphones },

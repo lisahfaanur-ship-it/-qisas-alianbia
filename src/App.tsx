@@ -10,6 +10,7 @@ import { AudioHubView } from './components/AudioHubView';
 import { QuizHubView } from './components/QuizHubView';
 import { SourcesPageView } from './components/SourcesPageView';
 import { ParentGuideView } from './components/ParentGuideView';
+import { TimelineView } from './components/TimelineView';
 import { AdminDashboardView } from './components/AdminDashboardView';
 import { SearchModal } from './components/SearchModal';
 import { AchievementsDashboardView } from './components/AchievementsDashboardView';
@@ -182,6 +183,15 @@ export default function App() {
             prophets={prophets}
             selectedAge={selectedAge}
             onSelectStory={handleSelectStory}
+          />
+        )}
+
+        {currentTab === 'timeline' && (
+          <TimelineView
+            prophets={prophets}
+            selectedAge={selectedAge}
+            onSelectStory={handleSelectStory}
+            onBack={() => setCurrentTab('home')}
           />
         )}
 

@@ -11,7 +11,8 @@ import {
   Hourglass,
   Shield,
   Layers,
-  Award
+  Award,
+  History
 } from 'lucide-react';
 import { ProphetStory, AgeGroup } from '../types';
 import { SymbolicArt } from './SymbolicArt';
@@ -216,6 +217,38 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Interactive Timeline Teaser */}
+      <section className="bg-white rounded-3xl p-8 sm:p-10 border-2 border-amber-200 shadow-sm relative overflow-hidden group">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110" />
+        
+        <div className="relative flex flex-col md:flex-row items-center gap-8">
+          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-amber-100 flex items-center justify-center text-4xl shrink-0 shadow-inner">
+            ⏳
+          </div>
+          
+          <div className="flex-1 space-y-4 text-center md:text-right">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-bold border border-amber-100">
+              <History className="w-3.5 h-3.5" />
+              <span>ميزة جديدة</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-900">
+              الخط الزمني للأنبياء والرسل
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed max-w-2xl">
+              استكشف التسلسل التاريخي لبعثة الأنبياء عليهم السلام منذ بداية الخلق وحتى خاتم المرسلين، وتعرف على الفترات الزمانية لكل نبي بطريقة تفاعلية.
+            </p>
+          </div>
+
+          <button
+            onClick={() => onNavigateTab('timeline')}
+            className="px-8 py-4 rounded-2xl bg-slate-950 hover:bg-slate-900 text-white font-black text-sm sm:text-base shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 flex items-center gap-2"
+          >
+            <span>عرض الخط الزمني</span>
+            <ArrowLeft className="w-5 h-5" />
+          </button>
         </div>
       </section>
 

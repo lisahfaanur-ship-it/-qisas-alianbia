@@ -94,6 +94,13 @@ export interface ReviewChecklist {
   audioScriptMatchesText: boolean;
 }
 
+export interface DifficultWord {
+  id: string;
+  word: string;
+  meaning: string;
+  pronunciationHint?: string; // e.g. phonetic or specific text for TTS if needed
+}
+
 export interface ProphetStory {
   id: string;
   name: string;
@@ -114,6 +121,7 @@ export interface ProphetStory {
 
   coreValues: CoreValue[];
   didYouKnow: DidYouKnowFact[];
+  vocabulary?: DifficultWord[];
   cautionsAndDiscrepancies: CautionItem[];
   sources: SourceReference[];
   quiz: QuizQuestion[];
